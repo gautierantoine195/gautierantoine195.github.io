@@ -1,0 +1,88 @@
+html {
+  font-family: 'Sansita Swashed', cursive;
+  background-image: url(https://i.pinimg.com/originals/ba/a8/34/baa83400c7ec3fe19dc3248d756238d1.jpg);
+  background-position: center;
+  background-color: #202020;
+  display: grid;
+  margin: 0;
+  place-items: center;
+  height: 100vh;
+}
+
+body {
+  margin: 0 auto;
+  padding: 5px 0;
+  width: 1400px;
+}
+
+a {
+  color: #CF6679;
+  text-decoration: none;
+}
+
+h1 {   
+  font-family: 'Sansita Swashed', sans-serif;
+  font-size: 70px;
+  text-align: center;
+  color: #03DAC5;
+  text-shadow: 0 0 30px white;
+}
+
+h4, h5, li {
+  font-family: 'Poppins', cursive;
+  font-size: 28px;    
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: white;
+}
+
+h4 {
+  margin: 20px 50px;
+  text-indent: 60px;
+  background-color: #202020;
+  border-radius: 50px;
+  width: fit-content;
+  border: 3px solid #202020;
+}
+
+h5 {
+  margin: 20px 50px;
+  text-indent: 10px;
+  background-color: #202020;
+  border-radius: 25px;
+  width: fit-content;
+  border: 3px solid #202020;
+}
+
+
+h2, h6 {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 42px;    
+  line-height: 2;
+  letter-spacing: 1px;
+  color: #CF6679;
+  margin: 5 0;
+  padding: 0 10px;
+  text-decoration: underline;
+}
+
+h6 {
+  width: 45%;
+  float: left;
+  line-height: 0;
+}
+
+img {
+  width: auto;
+  max-width: 475px;
+  border: 10px solid #202020;
+  border-radius: 25px;
+  margin: 10px;
+  display: block;
+}
+
+
+footer {
+  text-align: center;
+  padding: 3px;
+}
