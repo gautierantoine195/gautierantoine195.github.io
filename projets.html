@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<link href="style.css" rel="stylesheet" type="text/css">
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sansita+Swashed&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Programme sur Sierpinski</title>
+        <link rel="shortcut icon" href="C:\Users\spyro_31y\OneDrive\Images\Hope\IconProjets.ico">
+    </head>
+    <body>q
+        <h1>
+            <p>Le projet: Triangle de Sierpinski</p>
+        </h1>
+        
+        <h2>
+            <p>Expliquation :</p>
+        </h2>
+        
+        <h4>
+            <p>Pour les vacances de la Toussaint, notre professeur de NSI nous a demandé de créer un programme qui pouvait dessiner un triangle de Sierpinski. Cependant nous ne partions pas de rien, nous avions avec nous un programme qui dessinait un flocon de Koch.</p>
+            <p>Notre devoir était donc de modifier ce programme Python pour obtenir le fameux tapis de Sierpinski sous forme triangulaire. C'est donc ce que j'ai fait et c'est grâce à cette page HTML que je vais pouvoir vous expliquer comment j'ai réussi.</p>
+            <p>Un triangle de Sierpinski c'est ça : </p>
+        </h4>
+        
+        <img src="C:Users\spyro_31y\OneDrive\Images\Hope\SierpinskiTriangle.jpg" alt="Tapis de Sierpinski Triangulaire">
+        
+        <h2>
+            <p>Réalisation de la tache :</p>
+        </h2>
+        
+        <h4>
+            <p>J'ai tout d'abord regardé le programme de la courbe de Koch pour bien comprendre ce que chaque fonction faisait. Pour pouvoir changer ce programme il a donc fallu que je regarde les similitudes et les différences entre ce qui était obtenu avec le programme courbe de Koch et ce que l'on voulait obtenir avec le nouveau programme triangle de Sierpinski. Voici donc ce que j'ai trouvé :</p>
+            
+            <ul>
+                <li>F, G, - et + restent pareils</li>
+                <li>'F' ne devient plus ‘F+F--F+F’ mais devient ‘F-G+F+G-F’ → changement du 'if' dans le 'for' de la 'def regleKoch'</li>
+                <li>chaque 'G' sera maintenant remplacé par un 'GG' → ajout d’un 'elif' dans le 'for' de la 'def regleKoch'</li>
+                <li>le motif initial ‘F’ est maintenant ‘F-G-G’ → changement de la ligne 54, 'dessiner' aura comme courbe: "courbeKoch(‘F-G-G’, niter)"</li>
+                <li>la longueur change de 2 à 10 → "longueur = 10"</li>
+                <li>l’angle change de 60° à 120° dans les deux sens → "angle = 120"</li>
+                <li>le niter aura le même rôle, il sera là pour donner la précision du dessin, nous verrons plus tard ce que cela change</li>
+                <li>nous n'aurons également plus besoin de la 'def flocon'</li>
+            </ul>
+                  
+            <p>J'ai donc effectué tous ces changements. J'en ai aussi profité pour changer tous les 'Koch' en 'Sierpinski' car je préférais avoir des noms de fonction clairs.</p>
+            <p>Il ne me restait plus qu'à tester ce nouveau programme pour vérifier si tout fonctionnait comme prévu. C'était le cas. Mission accomplie!</p>
+        </h4>
+        
+        <h2>
+            <p>Images en fonction du 'niter' :</p>
+        </h2>
+        
+        <h4>
+            <p>Comme prévu, si on s'amuse un peu avec le programme, on réalise que changer le 'niter' change la précision de notre dessin. J'ai donc testé pour pleins de 'niter' différents.</p>
+        </h4>
+        
+        <h5>
+            <p>On à içi "niter = 3" :</p>
+        </h5>
+        
+        <img src="C:Users\spyro_31y\OneDrive\Images\Hope\niter3.png" alt="niter = 3">
+        
+        <h5>
+            <p>Là "niter = 5" :</p>
+        </h5>
+        
+        <img src="C:Users\spyro_31y\OneDrive\Images\Hope\niter5.png" alt="niter = 5">
+        
+        <h5>
+            <p>Et içi "niter = 6" :</p>
+        </h5>
+        
+        <img src="C:Users\spyro_31y\OneDrive\Images\Hope\niter6.png" alt="niter = 6">
+        
+        <h4>
+            <p>On peut donc constater que le 'niter' influence effectivement sur la précision du dessin. Plus le 'niter' est grand, plus il y a des triangles. On peut même dire que le nombre de triangle triple à chaque niter ajouté. C'est ce que l'on peut observer quand on voit qu'il y a 3 fois le dessin du "niter = 5" dans le le dessin du "niter = 6".</p>
+            <p>Sachant que j'appelle 'triple triangle' le résultat que l'on voit en mettant "niter = 1":</p>
+        </h4>
+        
+        <img src="C:Users\spyro_31y\OneDrive\Images\Hope\niter1.png" alt="niter = 1">
+        
+        <h4>
+            <p> Le 'niter' détermine donc la profondeur du tapis car il ajoute une couche de 'triple triangle' à chaque nouveau 'niter'. C'est pour cela que le 'niter = 3' a 3 tailles de 'triples triangles' alors que le 'niter = 6' en a 6.</p>
+        </h4>
+        <h2>
+            <p>Programme :</p>
+        </h2>
+        <h4>
+            <p>Si vous voulez voir en détail mon code vous pouvez le télécharger en cliquant <a href="C:\Users\spyro_31y\OneDrive\Images\Hope\Projet_De_Vacances_Antoine_Gautier.py" download> içi</a>.</p>
+        </h4>
+    </body>
+    <footer>
+        <h6>
+            <p><a href="index.html">Accueil</a></p>
+        </h6>
+        <h6>
+            <p><a href=#top>Haut de page</a></p>
+        </h6>
+    </footer>
+</html>
